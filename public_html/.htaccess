@@ -1,3 +1,6 @@
+AddHandler php71-script .php
+suPHP_ConfigPath /home/devsfromthefuture/
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
