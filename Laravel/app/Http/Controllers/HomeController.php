@@ -12,6 +12,11 @@ class HomeController extends Controller
 
     public function home()
     {
-        return view('newfeatures.home');
+        return view('home');
+    }
+
+    public function acknowledgement()
+    {
+        return view('acknowledgement');
     }
 }

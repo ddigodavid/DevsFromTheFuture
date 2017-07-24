@@ -22,13 +22,15 @@
         <div class="col-xs-12 col-md-3">
             <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
         </div>
-        <div class="col-xs-12 col-md-6 navbar-links">
+        <div class="col-xs-12 col-md-7 navbar-links">
             <ul>
                 <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                <li><a class="nav-link" href="{{ route('register.form') }}">Cadastre-se</a></li>
+                <li><a class="nav-link" href="javascript:void(0)">Diversidade</a></li>
+                <li><a class="nav-link" href="javascript:void(0)">Tendências</a></li>
+                <li><a class="nav-link" href="javascript:void(0)">Habilidades</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-3"></div>
+        <div class="col-xs-12 col-md-2"></div>
     </div>
 </nav>
 

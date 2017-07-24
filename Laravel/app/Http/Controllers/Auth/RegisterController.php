@@ -54,7 +54,7 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($data)));
 
-        return redirect($this->redirectPath());
+        return redirect('/acknowledgement');
     }
 
     /**
