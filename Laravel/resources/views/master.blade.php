@@ -12,15 +12,27 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/stylesheet.css" >
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 </head>
 <body>
+<nav class="navbar">
+    <div class="bring-from-right">
+        <div class="col-xs-12 col-md-3">
+            <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
+        </div>
+        <div class="col-xs-12 col-md-6 navbar-links">
+            <ul>
+                <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                <li><a class="nav-link" href="{{ route('register.form') }}">Cadastre-se</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-md-3"></div>
+    </div>
+</nav>
 
-<img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="200" class="img-responsive" style="margin-bottom: -40px">
-
-<div class="m-b-15">
+<div class="blog-content m-b-15">
     @yield('content')
 </div>
 

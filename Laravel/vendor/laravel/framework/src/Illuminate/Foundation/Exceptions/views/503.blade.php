@@ -39,7 +39,7 @@
                 text-align: center;
             }
 
-            .title {
+            .pink-label {
                 font-size: 84px;
             }
         </style>

@@ -1,14 +1,14 @@
 @extends('master')
 
 @section('content')
-    <div class="">
+    <div class="be-a-lead">
         <div class="center">
-            <h1 class="title texto animate-text-1">
+            <h1 class="title pink-label texto animate-text-1">
                 &lsaquo; Devs From The Future &rsaquo;
             </h1>
         </div>
         <div class="question texto center animate-text-3">
-            <p>&lsaquo;<span> "você está pronto para ser um dev do futuro?" </span> &rsaquo;</p>
+            <p><i class="pink-label">&lsaquo;</i><span> "você está pronto para ser um dev do futuro?" </span> <i class="pink-label">&rsaquo;</i></p>
         </div>
         {{--<div class="random center m-b-15">--}}
             {{--<span>&lsaquo;!-- <span>Se cadastre e entraremos em contato para mais informações e notícias...--}}
@@ -31,34 +31,34 @@
                     a partir de agora, é com você.
                 </span>
             </p>
-            <p>see you soon.</p>
+            <p class="pink-label">see you soon.</p>
         </div>
         <br>
         <div class="m-b-15 center animate-text-4">
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('register') }}" method="POST" class="m-b-15">
                 {{ csrf_field() }}
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="name" class="label">Nome:</label>
-                        <input type="text" name="name" class="form-control" placeholder="Ex.: Rodrigo" required="required" />
+                        <input type="text" name="name" class="form-control" placeholder="Ex.: Primero Nome" required="required" />
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="sobrenome" class="label">Sobrenome:</label>
-                        <input type="sobrenome" name="lastname" class="form-control" placeholder="Ex.: Oliveira" required="required" />
+                        <input type="sobrenome" name="lastname" class="form-control" placeholder="Ex.: Sobrenome" required="required" />
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="mail" class="label">E-mail:</label>
-                        <input type="email" name="email" class="form-control" required="required" />
+                        <input type="email" name="email" class="form-control" required="required" placeholder="Ex.: email&#64;exampe.com" />
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="mail" class="label">Profissão:</label>
-                        <input type="text" name="occupation" class="form-control" required="required" />
+                        <input type="text" name="occupation" class="form-control" required="required" placeholder="Ex.: " />
                     </div>
                 </div>
                 <div class="col-xs-12">

@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.jumbotron.transparency {
+  background: rgba(25, 11, 11, 0.0)
+}

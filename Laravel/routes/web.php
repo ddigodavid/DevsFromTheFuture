@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('register.form');
+Route::get('/home', 'HomeController@home')->name('home');
 
 Route::post('/register', 'Auth\\RegisterController@register')->name('register');
