@@ -19,13 +19,13 @@
             </div>
         </div>
         <div class="container call-to-action">
-            <div class="fill-height fill-width">
-                <a href="{{ route('register.form') }}" class="fill-height">
-                    <div class="col-sm-12 col-md-8 fill-height v-align-content-center">
+            <div class="full-height fill-width">
+                <a href="{{ sprintf("%s%s", route('register.form'), '?utm_source=website&utm_campaign=Bot%C3%A3o%20Commit') }}" class="fill-height">
+                    <div class="col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-1 fill-height v-align-content-center">
                         <h3 class="white-label">VOCÊ ESTÁ PREPARADO PARA SE TORNAR ESSE PROFISSIONAL?</h3>
                     </div>
-                    <div class="col-sm-12 col-md-4 fill-height v-align-content-center">
-                        <span class="dark-blue-label" style="font-size: 40px">
+                    <div class="col-sm-12 col-md-5 fill-height v-align-content-center">
+                        <span class="dark-blue-label commit-here-button">
                             [&nbsp;&nbsp;&nbsp;COMMIT HERE&nbsp;&nbsp;&nbsp;]
                             {{--<a href="{{ route('register.form') }}">[&nbsp;&nbsp;&nbsp;COMMIT HERE&nbsp;&nbsp;&nbsp;]</a>--}}
                         </span>

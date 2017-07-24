@@ -35,7 +35,7 @@
         </div>
         <br>
         <div class="m-b-15 center animate-text-4">
-            <form action="{{ route('register') }}" method="POST" class="m-b-15">
+            <form action="{{ sprintf("%s%s", route('register'), '?utm_source=website&utm_campaign=cadastro-form-site') }}" method="POST" class="m-b-15">
                 {{ csrf_field() }}
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -58,20 +58,20 @@
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="mail" class="label">Profissão:</label>
-                        <input type="text" name="occupation" class="form-control" required="required" placeholder="Ex.: " />
+                        <input type="text" name="occupation" class="form-control" required="required" placeholder="Ex.: Project Manager" />
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="mail" class="label">Já programa ou tem interesse em aprender?</label><br>
-                        <input id="interested" type="radio" name="interestedInProgramming" value="1" /> <label class="label" for="interested">Sim</label>
+                        <input id="interested" type="radio" name="interestedInProgramming" value="1" checked="checked" /> <label class="label" for="interested">Sim</label>
                         <input id="notInterested" type="radio" name="interestedInProgramming" value="0" /> <label class="label" for="notInterested">Não</label>
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="mail" class="label">Pensa em trabalhar em Start Ups?</label><br>
-                        <input id="want" type="radio" name="wantToWorkInStartUps" value="1" /> <label class="label" for="want">Sim</label>
+                        <input id="want" type="radio" name="wantToWorkInStartUps" value="1" checked="checked" /> <label class="label" for="want">Sim</label>
                         <input id="dontWant" type="radio" name="wantToWorkInStartUps" value="0" /> <label class="label" for="dontWant">Não</label>
                     </div>
                 </div>

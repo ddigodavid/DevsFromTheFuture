@@ -4,7 +4,7 @@
     line-height: 32px;
 }
 
-.fill-height {
+.full-height {
     height: 100%;
 }
 
@@ -18,6 +18,14 @@
 }
 
 @media screen and (max-width: 500px) {
+    .fill-height {
+        height: 50%;
+    }
+
+    .commit-here-button {
+        font-size: 30px
+    }
+
     .call-to-action {
         height: 230px;
         background: #0e021d;
@@ -62,6 +70,14 @@
 }
 
 @media screen and (min-width: 500px) {
+    .fill-height {
+        height: 100%;
+    }
+
+    .commit-here-button {
+        font-size: 40px
+    }
+
     .call-to-action {
         height: 150px;
         justify-content: space-between;
@@ -350,6 +366,11 @@ body::-webkit-scrollbar-thumb {
 @keyframes bring-from-right {
     /*from {left: 100%}*/
     /*to {left: 0px}*/
+}
+
+input {
+    color: #464646 !important;
+    font-weight: 600;
 }
 
 input:focus::placeholder {
