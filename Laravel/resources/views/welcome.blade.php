@@ -1,187 +1,68 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>< Devs From The Future ></title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #363636;
-                color: #FFFFFF;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .question {
-                font-size: 55px;
-            }
-
-            .form {
-                font-size: 20px;
-                text-align: right;
-                margin-right: 41%;
-            }
-
-            .random {
-                font-size: 26px;
-                text-align: center;
-                color: #8B7355;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .texto {
-                margin-bottom: 30px;
-            }
-
-            .pergunta {
-                margin-bottom: px;
-            }
-
-            div {
-                text-align: center;
-            }
-
-            p, .title {
-                color: #BD0A5D;
-                font-weight: bold;
-            }
-
-            span {
-                color: #FFFFFF;
-                font-weight: normal;
-            }
-
-            input {
-                border: 3px solid powderblue
-            }
-
-            form div + div {
-                margin-top: 1em;
-            }
-
-            form {
-                /* centralizar o form */
-                margin: 0 auto;
-                width: 400px;
-            }
-
-            label {
-            /* alinhar labels */
-                display: inline-block;
-                width: 90px;
-                text-align: right;
-            }
-
-            input:focus {
-                border-color: #97FFFF;
-                color: #000000;
-                font-weight: bold;
-            }
-
-            .button {
-                /* alinhar botão */
-                padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
-            }
-            button {
-                margin-left: .5em;
-                color: #FFFFFF;
-                background: #7CFC00;
-                font-weight: bold;
-            }
-
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div>
-                    <h1 class="title texto">&lsaquo; Devs From The Future &rsaquo;
-                    </h1>
-                </div>
-                <div class="question texto">
-                    <p>&lsaquo;<span> "Você está pronto para ser um Dev do futuro?" </span> &rsaquo;</p>
-                </div>
-                <div class="random">
-                    <span>&lsaquo;!-- Não se Preocupe, no nosso Futuro não Existe spam --&rsaquo;</span>
-                </div>
-                <br>
-                <form action="formulario" method="post">
-                    <div>
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" />
+@section('content')
+    <div class="position-ref full-height">
+        <div class="content">
+            <div>
+                <h1 class="title texto">&lsaquo; Devs From The Future &rsaquo;
+                </h1>
+            </div>
+            <div class="question texto">
+                <p>&lsaquo;<span> "Você está pronto para ser um Dev do futuro?" </span> &rsaquo;</p>
+            </div>
+            <div class="random">
+                <span>&lsaquo;!-- <span>Se cadastre e entraremos em contato para mais informações e notícias...
+                        <br> Notícias que mudarão sua carreira para sempre!</span> --&rsaquo;</span>
+            </div>
+            <br>
+            <div class="row m-b-15">
+                <form action="{{ route('register') }}" method="POST">
+                    {{ csrf_field() }}
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="name" class="label">Nome:</label>
+                            <input type="text" name="name" class="form-control" placeholder="Ex.: Rodrigo" required="required" />
+                        </div>
                     </div>
-                    <div>
-                        <label for="sobrenome">Sobrenome:</label>
-                        <input type="sobrenome" id="sobrenome"></input>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="sobrenome" class="label">Sobrenome:</label>
+                            <input type="sobrenome" name="lastname" class="form-control" placeholder="Ex.: Oliveira" required="required" />
+                        </div>
                     </div>
-                    <div>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" />
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="mail" class="label">E-mail:</label>
+                            <input type="email" name="email" class="form-control" required="required" />
+                        </div>
                     </div>
-                        <div class="button">
-                        <button type="submit">[ commit ]</button>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="mail" class="label">Profissão:</label>
+                            <input type="text" name="occupation" class="form-control" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="mail" class="label">Já programa ou tem interesse em aprender?</label><br>
+                            <input id="interested" type="radio" name="interestedInProgramming" value="1" /> <label class="label" for="interested">Sim</label>
+                            <input id="notInterested" type="radio" name="interestedInProgramming" value="0" /> <label class="label" for="notInterested">Não</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="mail" class="label">Pensa em trabalhar em Start Ups?</label><br>
+                            <input id="want" type="radio" name="wantToWorkInStartUps" value="1" /> <label class="label" for="want">Sim</label>
+                            <input id="dontWant" type="radio" name="wantToWorkInStartUps" value="0" /> <label class="label" for="dontWant">Não</label>
+                        </div>
+                    </div>
+                    <br>
+                    <span>&lsaquo;!-- Não se Preocupe, no nosso Futuro não existe spam! --&rsaquo;</span>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-success btn-block" style="color: #000">[ commit ]</button>
                     </div>
                 </form>
             </div>
         </div>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-103032771-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-    </body>
-</html>
+    </div>
+@endsection

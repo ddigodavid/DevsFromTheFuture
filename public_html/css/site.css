@@ -1,0 +1,125 @@
+html, body {
+    background-color: #363636;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    max-width: 99%;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+
+}
+
+.title {
+    font-size: 84px;
+}
+
+.question {
+    font-size: 55px;
+}
+
+.form {
+    font-size: 20px;
+    text-align: right;
+    margin-right: 41%;
+}
+
+.random {
+    font-size: 26px;
+    text-align: center;
+    color: #8B7355;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.texto {
+    margin-bottom: 30px;
+}
+
+.pergunta {
+    margin-bottom: px;
+}
+
+div {
+    text-align: center;
+}
+
+p, .title {
+    color: #BD0A5D;
+    font-weight: bold;
+}
+
+span {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+input {
+    border: 3px solid powderblue
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+form {
+    /* centralizar o form */
+    margin: 0 auto;
+    width: 400px;
+}
+
+.label {
+    /* alinhar labels */
+    font-size: 90%;
+}
+
+input:focus {
+    border-color: #97FFFF;
+    color: #000000;
+    font-weight: bold;
+}
+
+.button {
+    /* alinhar botão */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+}
+button {
+    margin-left: .5em;
+    color: #FFFFFF;
+    background: #7CFC00;
+    font-weight: bold;
+}
+
+.m-b-15 {
+    margin-bottom: 15px;
+}
