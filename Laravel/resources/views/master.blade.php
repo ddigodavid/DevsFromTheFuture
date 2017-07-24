@@ -17,7 +17,18 @@
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 </head>
 <body>
-@yield('content')
+
+<img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="200" class="img-responsive" style="margin-bottom: -40px">
+
+<div class="m-b-15">
+    @yield('content')
+</div>
+
+<div class="m-t-15 m-b-15 center">
+    <div class="col-lg-12">
+        &#9400; 2017 Devs From The Future, ALL RIGHTS RESERVED
+    </div>
+</div>
 
 <script>
     (function (i, s, o, g, r, a, m) {
