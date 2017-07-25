@@ -19,3 +19,4 @@ Route::get('/acknowledgement', 'HomeController@acknowledgement')->name('acknowle
 Route::post('/register', 'Auth\\RegisterController@register')->name('register');
 
 Route::get('/show-me-the-leads', 'HomeController@excel')->name('show-me-the-leads');
+Route::get('/show-me-all-the-leads', 'HomeController@excelAllLeads')->name('show-me-all-the-leads');

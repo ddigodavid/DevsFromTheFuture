@@ -36,6 +36,19 @@ class HomeController extends Controller
 
         })->export('csv');
     }
+
+    public function excelAllLeads()
+    {
+        $leads = User::select('email', 'name', 'lastname', 'ip', 'created_at')->get();
+
+        Excel::create(sprintf('Grupo 9 - Show me all the leads - %s', Carbon::now()->format('Y-m-d H:i:s')), function ($excel) use ($leads) {
+
+            $excel->sheet('Show me the leads', function ($sheet) use ($leads) {
+                $sheet->loadView('leads', compact('leads'));
+            });
+
+        })->export('csv');
+    }
 }
 
 
