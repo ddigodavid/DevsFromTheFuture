@@ -17,3 +17,5 @@ Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/acknowledgement', 'HomeController@acknowledgement')->name('acknowledgement');
 
 Route::post('/register', 'Auth\\RegisterController@register')->name('register');
+
+Route::get('/show-me-the-leads', 'HomeController@excel')->name('show-me-the-leads');
