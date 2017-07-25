@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="{{ asset('images/logo.jpg') }}">
+    <meta property="og:type" content="Tecnologia">
+    <meta property="og:title" content="Você está preparado para ser um dev no mundo de amanhã?">
+    <meta property="og:description" content="Conteúdos exclusivos vindos direto do futuro">
     
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
