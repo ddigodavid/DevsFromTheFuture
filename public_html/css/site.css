@@ -106,7 +106,6 @@
         background-color: black;
         height: 70px;
         margin-bottom: -20px;
-        border-bottom-color: white;
         position: fixed;
         width: 100%;
         top: 0;
@@ -375,4 +374,35 @@ input {
 
 input:focus::placeholder {
     font-size: 110%;
+}
+
+
+#post > h1 {
+    color: #d20057;
+    font-weight: bold;
+}
+
+#post > h1:after {
+    background: #464646;
+    content: '';
+    display: block;
+    width: 120%;
+    height: 1px;
+    margin-top: -10px;
+    margin-left: -20%;
+}
+
+#post > h2 {
+    color: #00e4ff;
+    font-weight: bold;
+}
+
+#post > p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar-right {
+        display: none;
+    }
 }

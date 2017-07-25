@@ -47,7 +47,7 @@ class HomeController extends Controller
                 $sheet->loadView('leads', compact('leads'));
             });
 
-        })->export('xls');
+        })->export('csv');
     }
 }
 

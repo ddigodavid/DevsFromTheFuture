@@ -16,6 +16,10 @@ Route::get('/', 'HomeController@home');
 Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/acknowledgement', 'HomeController@acknowledgement')->name('acknowledgement');
 
+Route::get('/diversidade/{slug}', 'Posts\\PostsController@diversity');
+Route::get('/tendencias/{slug}', 'Posts\\PostsController@tendencies');
+Route::get('/habilidades/{slug}', 'Posts\\PostsController@skills');
+
 Route::post('/register', 'Auth\\RegisterController@register')->name('register');
 
 Route::get('/show-me-the-leads', 'HomeController@excel')->name('show-me-the-leads');
