@@ -25,10 +25,10 @@
 <body>
 <nav class="navbar">
     <div class="bring-from-right">
-        <div class="col-xs-12 col-md-3">
+        <div class="col-sm-12 col-md-3">
             <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
         </div>
-        <div class="col-xs-12 col-md-offset-4 col-md-5 navbar-links">
+        <div class="col-sm-12 col-md-offset-4 col-md-5 navbar-links">
             <ul>
                 <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                 <li><a class="nav-link" href="{{ route('diversity.index', ['slug' => 'slug-da-news']) }}">Diversidade</a></li>
@@ -36,7 +36,7 @@
                 <li><a class="nav-link" href="{{ route('skills.index', ['slug' => '6-habilidades-que-as-startups-procuram-em-seus-desenvolvedores-fora-a-tecnica']) }}">Habilidades</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-2"></div>
+        <div class="col-sm-12 col-md-2"></div>
     </div>
 </nav>
 

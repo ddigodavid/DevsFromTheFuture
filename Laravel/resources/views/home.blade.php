@@ -36,14 +36,14 @@
     </main>
     <br><br>
     <div class="container">
-        {{--<div class="col-xs-12">--}}
+        {{--<div class="col-sm-12">--}}
             {{--<div class="big-caption">--}}
                 {{--<h3 class="pink-label">mantenha a calma, jovem padawn.</h3>--}}
                 {{--<p>estamos fazendo o download para que em breve você tenha conteúdos incríveis vindos direto do futuro.</p>--}}
             {{--</div>--}}
         {{--</div>--}}
         @foreach($posts as $post)
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-sm-12 col-md-4">
                 <div class="caption">
                     <a href="{{ route(sprintf('%s.index', $post->area), ['slug' => $post->slug]) }}">
                         <p class="white-label">{{ $post->getAreaLabel() }}</p>
