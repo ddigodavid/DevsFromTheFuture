@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
@@ -16,7 +17,9 @@ class HomeController extends Controller
 
     public function home()
     {
-        return view('home');
+        $posts = Post::where('status', '=', 1)->limit(3)->orderBy('created_at', 'DESC')->get();
+
+        return view('home', compact('posts'));
     }
 
     public function acknowledgement()

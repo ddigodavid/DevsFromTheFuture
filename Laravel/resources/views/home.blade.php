@@ -36,65 +36,26 @@
     </main>
     <br><br>
     <div class="container">
-        <div class="col-xs-12">
-            <div class="big-caption">
-                <h3 class="pink-label">mantenha a calma, jovem padawn.</h3>
-                <p>estamos fazendo o download para que em breve você tenha conteúdos incríveis vindos direto do futuro.</p>
-            </div>
-        </div>
-        {{--<div class="">--}}
-            {{--<div class="col-xs-12 col-sm-6">--}}
-                {{--<div class="big-caption">--}}
-                    {{--<p>lorem ipsum</p>--}}
-                    {{--<h3>post title</h3>--}}
-                    {{--<p>at, laoreet ac erat. Donec est neque, volutpat euismod dui id, consectetur sodales enim. Curabitur--}}
-                        {{--at </p>--}}
-                    {{--<div class="thumbnail" style="height: 400px;">--}}
-                        {{--<img class="thumbnail img-responsive" src="img/diversidade-01.jpg" alt="...">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-xs-12 col-sm-3">--}}
-                {{--<div class="caption">--}}
-                    {{--<p>lorem ipsum</p>--}}
-                    {{--<h3>post title</h3>--}}
-                    {{--<p>at, laoreet ac erat. Donec est neque, volutpat euismod dui id, consectetur sodales enim. Curabitur--}}
-                        {{--at </p>--}}
-                    {{--<div class="thumbnail">--}}
-                        {{--<img class="thumbnail img-responsive" src="img/blockchain-avatar-01.jpg" alt="...">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="caption">--}}
-                    {{--<p>lorem ipsum</p>--}}
-                    {{--<h3>post title</h3>--}}
-                    {{--<p>at, laoreet ac erat. Donec est neque, volutpat euismod dui id, consectetur sodales enim. Curabitur--}}
-                        {{--at </p>--}}
-                    {{--<div class="thumbnail">--}}
-                        {{--<img class="thumbnail img-responsive" src="img/blockchain-avatar-01.jpg" alt="...">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-xs-12 col-sm-3">--}}
-                {{--<div class="caption">--}}
-                    {{--<p>lorem ipsum</p>--}}
-                    {{--<h3>post title</h3>--}}
-                    {{--<p>at, laoreet ac erat. Donec est neque, volutpat euismod dui id, consectetur sodales enim. Curabitur--}}
-                        {{--at </p>--}}
-                    {{--<div class="thumbnail">--}}
-                        {{--<img class="thumbnail img-responsive" src="img/biotech 2-01-01.jpg" alt="...">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="caption">--}}
-                    {{--<p>lorem ipsum</p>--}}
-                    {{--<h3>post title</h3>--}}
-                    {{--<p>at, laoreet ac erat. Donec est neque, volutpat euismod dui id, consectetur sodales enim. Curabitur--}}
-                        {{--at </p>--}}
-                    {{--<div class="thumbnail">--}}
-                        {{--<img class="thumbnail img-responsive" src="img/blockchain-avatar-01.jpg" alt="...">--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+        {{--<div class="col-xs-12">--}}
+            {{--<div class="big-caption">--}}
+                {{--<h3 class="pink-label">mantenha a calma, jovem padawn.</h3>--}}
+                {{--<p>estamos fazendo o download para que em breve você tenha conteúdos incríveis vindos direto do futuro.</p>--}}
             {{--</div>--}}
         {{--</div>--}}
+        @foreach($posts as $post)
+            <div class="col-xs-12 col-sm-4">
+                <div class="caption">
+                    <a href="{{ route(sprintf('%s.index', $post->area), ['slug' => $post->slug]) }}">
+                        <p class="white-label">{{ $post->getAreaLabel() }}</p>
+                        <h3 class="white-label">{{ $post->title }}</h3>
+                        <p class="white-label">{!! str_limit($post->description) !!}</p>
+                        <div class="thumbnail">
+                            <img class="thumbnail img-responsive" src="{{ asset($post->imagePath) }}" alt="...">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        @endforeach
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

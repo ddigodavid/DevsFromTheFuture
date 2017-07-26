@@ -12,9 +12,9 @@ class PostsController extends Controller
     {
         $post = Post::where('area', '=', 'diversity')->where('slug', '=', $slug)->first();
 
-//        if (! $post) {
-//            return Redirect::route('home);
-//        }
+        if (! $post) {
+            return Redirect::route('home');
+        }
 
         return view('posts.index', compact('post'));
     }
@@ -34,9 +34,9 @@ class PostsController extends Controller
     {
         $post = Post::where('area', '=', 'skills')->where('slug', '=', $slug)->first();
 
-//        if (! $post) {
-//            return Redirect::route('home);
-//        }
+        if (! $post) {
+            return Redirect::route('home');
+        }
 
         return view('posts.index', compact('post'));
     }

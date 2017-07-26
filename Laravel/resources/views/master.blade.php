@@ -16,9 +16,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" >
-    <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}" >
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+    @section('head')
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+    @show
 </head>
 <body>
 <nav class="navbar">
@@ -26,12 +28,12 @@
         <div class="col-xs-12 col-md-3">
             <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
         </div>
-        <div class="col-xs-12 col-md-7 navbar-links">
+        <div class="col-xs-12 col-md-offset-4 col-md-5 navbar-links">
             <ul>
                 <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                <li><a class="nav-link" href="javascript:void(0)">Diversidade</a></li>
-                <li><a class="nav-link" href="javascript:void(0)">Tendências</a></li>
-                <li><a class="nav-link" href="javascript:void(0)">Habilidades</a></li>
+                <li><a class="nav-link" href="{{ route('diversity.index', ['slug' => 'slug-da-news']) }}">Diversidade</a></li>
+                <li><a class="nav-link" href="{{ route('tendencies.index', ['slug' => '5-fatos-do-futuro-que-todo-desenvolvedor-deve-saber']) }}">Tendências</a></li>
+                <li><a class="nav-link" href="{{ route('skills.index', ['slug' => '6-habilidades-que-as-startups-procuram-em-seus-desenvolvedores-fora-a-tecnica']) }}">Habilidades</a></li>
             </ul>
         </div>
         <div class="col-xs-12 col-md-2"></div>

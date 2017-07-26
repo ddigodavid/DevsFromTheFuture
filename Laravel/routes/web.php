@@ -12,13 +12,16 @@
 */
 
 Route::get('/register-in-the-future', 'HomeController@index')->name('register.form');
-Route::get('/', 'HomeController@home');
-Route::get('/home', 'HomeController@home')->name('home');
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('/home', 'HomeController@home');
 Route::get('/acknowledgement', 'HomeController@acknowledgement')->name('acknowledgement');
 
-Route::get('/diversidade/{slug}', 'Posts\\PostsController@diversity');
-Route::get('/tendencias/{slug}', 'Posts\\PostsController@tendencies');
-Route::get('/habilidades/{slug}', 'Posts\\PostsController@skills');
+Route::get('/diversidade/{slug}', 'Posts\\PostsController@diversity')->name('diversity.index');
+Route::get('/tendencias/{slug}', 'Posts\\PostsController@tendencies')->name('tendencies.index');
+Route::get('/habilidades/{slug}', 'Posts\\PostsController@skills')->name('skills.index');
+Route::get('/post/test', function () {
+    return view('posts.test');
+});
 
 Route::post('/register', 'Auth\\RegisterController@register')->name('register');
 

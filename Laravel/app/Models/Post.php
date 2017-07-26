@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+
     protected $table = 'posts';
     protected $fillable = [
         'title',
@@ -15,4 +16,15 @@ class Post extends Model
         'area',
         'slug'
     ];
+
+    public function getAreaLabel()
+    {
+        $labels = [
+            'tendencies' => 'Tendências',
+            'diversity'  => 'Diversidade',
+            'skills'     => 'Habilidades',
+        ];
+
+        return array_get($labels, $this->area);
+    }
 }

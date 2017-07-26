@@ -8,19 +8,29 @@
 
 @section('content')
     <div id="post" class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1 text-justify">
-        <h1 class="line-after-fill-left title-post">{{ $post->title }}</h1>
+        <h1>Construindo diversidade: como empoderar mulheres para programar</h1>
     
-        {!! $post->description !!}
-        
-        <img src="{{ asset($post->imagePath) }}" alt="" width="100%" style="margin-top: 30px">
-        
-        {{--<p>E você, está preparado para ser um desenvolvedor do futuro?</p>--}}
-        {{----}}
-        {{--<p>Torne-se um de nós. receba na sua caixa de entrada referências sobre três conhecimentos essenciais para qualquer--}}
-            {{--desenvolvedor do futuro.--}}
-            {{--são conceitos, artigos, cursos e livros selecionados, sobre assuntos que você não pode deixar de saber.--}}
-            {{--a partir de agora, é com você.--}}
-            {{--see you soon.</p>--}}
+        <p>De acordo com o censo de 2010, as mulheres representam apenas 25% dos programadores. Apesar de um histórico de pouca participação na área, nos últimos anos as coisas têm mudado. As mulheres têm passado de observadoras à protagonistas, porém os números ainda assustam. Conforme as fontes:</p>
+    
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                Apenas
+                15,53%
+                dos alunos de cursos relacionados à computação são mulheres.
+                (Fonte: Inep/MEC)
+            </div>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-3">
+                41%
+                das mulheres que trabalham com tecnologia acabam deixando a área, em comparação com apenas 17% dos homens.
+                (Fonte: Harvard Business Review)
+            </div>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-3">
+            79%
+            das alunas dos cursos relacionados à Tecnologia da Informação desistem no primeiro ano
+            (Fonte: Gizmodo)
+            </div>
+        </div>
+
     </div>
     <div class="col-sm-12 col-md-3 col-md-offset-1 sidebar-right text-justify">
         <div class="container"></div>
