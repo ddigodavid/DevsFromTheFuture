@@ -8,7 +8,7 @@
 
 @section('content')
     <div id="post" class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1 text-justify">
-        <h1 class="line-after-fill-left title-post">{{ $post->title }}</h1>
+        <h1 class="line-after-fill-left title-post" style="font-size:30px;">{{ $post->title }}</h1>
     
         {!! $post->description !!}
         
@@ -39,7 +39,7 @@
                         <span class="dark-blue-label commit-here-button">
                             <div class="row">
                                 <div class="col-sm-7">
-                                    [&nbsp;&nbsp;&nbsp;COMMIT&nbsp;&nbsp;&nbsp;]
+                                    [&nbsp;&nbsp;COMMIT&nbsp;&nbsp;]
                                 </div>
                             </div>
                             {{--<a href="{{ route('register.form') }}">[&nbsp;&nbsp;&nbsp;COMMIT HERE&nbsp;&nbsp;&nbsp;]</a>--}}

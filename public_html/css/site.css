@@ -1,7 +1,8 @@
 .header-html-tagged {
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+
     line-height: 32px;
+    letter-spacing:1px;
 }
 
 .full-height {
@@ -152,6 +153,8 @@ a.nav-link {
     text-transform: uppercase;
     display: block;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing:2px;
 }
 
 a.nav-link:after {
