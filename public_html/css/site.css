@@ -390,9 +390,3 @@ input {
 input:focus::placeholder {
     font-size: 110%;
 }
-
-@media screen and (max-width: 500px) {
-    .sidebar-right {
-        display: none;
-    }
-}
