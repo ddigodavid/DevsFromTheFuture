@@ -1,5 +1,15 @@
 @extends('master')
 
+@section('og:image')
+    <meta property="og:image" content="{{ asset($post->imagePath) }}">
+@endsection
+@section('og:title')
+    <meta property="og:title" content="{{ sprintf("Devs From The Future - %s", $post->title) }}">
+@endsection
+@section('og:description')
+    <meta property="og:description" content="{{ $post->preview }}">
+@endsection
+
 @section('head')
     @parent
 
@@ -10,9 +20,11 @@
     <div id="post" class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1 text-justify">
         <h1 class="line-after-fill-left title-post" style="font-size:30px;">{{ $post->title }}</h1>
     
-        <img src="{{ asset($post->imagePath) }}" alt="" width="100%" style="margin-top: 30px">
+        <img src="{{ asset($post->imagePath) }}" alt="" width="100%" style="">
         
-        {!! $post->description !!}
+        <div class="p-t-20">
+            {!! $post->description !!}
+        </div>
     </div>
     <div class="col-sm-12 col-md-3 col-md-offset-1 sidebar-right text-justify">
         <div class="container"></div>
