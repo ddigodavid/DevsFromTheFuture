@@ -1,11 +1,22 @@
+@media screen and (min-device-width: 100px) and (max-device-width: 500px) {
+    .call-to-action-posts {
+        height: 300px;
+        background: #0e021d;
+        width: 30%;
+        overflow: hidden;
+    }
 
-@media screen and (min-width: 500px) {
+    .sidebar-right {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 500px) {
     .call-to-action-posts {
         height: auto;
         background: #0e021d;
         width: 100%;
         overflow: hidden;
-
         padding: 20px;
     }
 
@@ -15,19 +26,10 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    .call-to-action-posts {
-        height: 300px;
-        background: #0e021d;
-        width: 100%;
-        overflow: hidden;
-    }
-}
-
 #post > h1 {
     color: #d20057;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 }
 
 #post > h1:after {
@@ -36,7 +38,7 @@
     display: block;
     width: 120%;
     height: 1px;
-    margin-top: -7px;
+    margin-top: -5px;
     margin-left: -20%;
 }
 

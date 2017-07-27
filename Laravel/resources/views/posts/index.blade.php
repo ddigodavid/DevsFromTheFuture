@@ -4,7 +4,7 @@
     <meta property="og:image" content="{{ asset($post->imagePath) }}">
 @endsection
 @section('og:title')
-    <meta property="og:title" content="{{ sprintf("Devs From The Future - %s", $post->title) }}">
+    <meta property="og:title" content="{{ sprintf("%s", $post->title) }}">
 @endsection
 @section('og:description')
     <meta property="og:description" content="{{ $post->preview }}">
@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-    <div id="post" class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1 text-justify">
+    <div id="post" class="col-sm-12 col-sm-offset-0 col-md-7 col-md-offset-1 text-justify">
         <h1 class="line-after-fill-left title-post" style="font-size:30px;">{{ $post->title }}</h1>
     
         <img src="{{ asset($post->imagePath) }}" alt="" width="100%" style="">
