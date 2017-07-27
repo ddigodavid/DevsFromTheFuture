@@ -23,22 +23,27 @@
     @show
 </head>
 <body>
-<nav class="navbar">
-    <div class="bring-from-right">
-        <div class="col-sm-12 col-md-3">
-            <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{{ asset('images/logo-04.png') }}" alt="Devs FTF" width="230" class="" style="margin-bottom: -30px;margin-top: -10px;">
+            </div>
+            <div class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                    <li><a class="nav-link" href="{{ route('diversity.index', ['slug' => 'slug-da-news']) }}">Diversidade</a></li>
+                    <li><a class="nav-link" href="{{ route('tendencies.index', ['slug' => '5-fatos-do-futuro-que-todo-desenvolvedor-deve-saber']) }}">Tendências</a></li>
+                    <li><a class="nav-link" href="{{ route('skills.index', ['slug' => '6-habilidades-que-as-startups-procuram-em-seus-desenvolvedores-fora-a-tecnica']) }}">Habilidades</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-offset-4 col-md-5 navbar-links">
-            <ul>
-                <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                <li><a class="nav-link" href="{{ route('diversity.index', ['slug' => 'slug-da-news']) }}">Diversidade</a></li>
-                <li><a class="nav-link" href="{{ route('tendencies.index', ['slug' => '5-fatos-do-futuro-que-todo-desenvolvedor-deve-saber']) }}">Tendências</a></li>
-                <li><a class="nav-link" href="{{ route('skills.index', ['slug' => '6-habilidades-que-as-startups-procuram-em-seus-desenvolvedores-fora-a-tecnica']) }}">Habilidades</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-12 col-md-2"></div>
     </div>
-</nav>
 
 <div class="blog-content m-b-15">
     @yield('content')
@@ -67,5 +72,13 @@
     ga('send', 'pageview');
 
 </script>
+<script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
