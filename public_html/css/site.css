@@ -293,6 +293,10 @@ form {
     padding-bottom: 15px;
 }
 
+.p-t-20 {
+    padding-top: 20px;
+}
+
 .absolute {
     position: absolute;
 }

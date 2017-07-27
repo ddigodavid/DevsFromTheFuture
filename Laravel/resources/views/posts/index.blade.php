@@ -10,9 +10,9 @@
     <div id="post" class="col-xs-12 col-xs-offset-0 col-md-7 col-md-offset-1 text-justify">
         <h1 class="line-after-fill-left title-post" style="font-size:30px;">{{ $post->title }}</h1>
     
-        {!! $post->description !!}
-        
         <img src="{{ asset($post->imagePath) }}" alt="" width="100%" style="margin-top: 30px">
+        
+        {!! $post->description !!}
     </div>
     <div class="col-sm-12 col-md-3 col-md-offset-1 sidebar-right text-justify">
         <div class="container"></div>

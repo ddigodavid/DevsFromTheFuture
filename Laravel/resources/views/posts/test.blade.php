@@ -15,7 +15,7 @@
     
         <img src="{{ asset('images/posts/construindo-diversidade-como-empoderar-mulheres-para-programar.jpg') }}" alt="" width="100%" style="margin-top: 30px">
     
-        <p style="padding-top:20px;">
+        <p class="p-t-20">
             De acordo com o censo de 2010, as mulheres representam apenas 25% dos programadores. Apesar de um histórico de pouca participação na área, nos últimos anos as coisas têm mudado. As mulheres têm passado de observadoras à protagonistas, porém os números ainda assustam. Conforme as fontes:
         </p>
     
