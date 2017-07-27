@@ -47,7 +47,7 @@
                 <div class="caption">
                     <a href="{{ route(sprintf('%s.index', $post->area), ['slug' => $post->slug]) }}">
                         <p class="white-label">{{ $post->getAreaLabel() }}</p>
-                        <h3 class="white-label">{{ $post->title }}</h3>
+                        <h3 class="white-label">{{ str_limit($post->title, 55) }}</h3>
                         <p class="white-label">{!! str_limit($post->description) !!}</p>
                         <div class="thumbnail">
                             <img class="thumbnail img-responsive" src="{{ asset($post->imagePath) }}" alt="...">
